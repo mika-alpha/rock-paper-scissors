@@ -9,44 +9,45 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    
     <div class ="header">
-        <h1>Rock vs Paper vs Scissors</h1>
+        <h2>Rock vs Paper vs Scissors</h1>
     </div>
 
     <div class ="game">
 
-        <div class ="player-panel">
+        <div class ="left">
 
-            <div class ="pick">
-                
-            <input type ="image" src="img/rock.png" id="rock" alt="rock"></button>
-            <input type ="image" src="img/paper.png" id="paper" alt="paper"></button>
-            <input type ="image" src="img/scissors.png" id="scissors" alt="scissors" ></button>
+            <div class ="pick-panel">
+                    
+                <input type ="image" src="img/rock.png" id="rock" alt="rock"></button>
+                <input type ="image" src="img/paper.png" id="paper" alt="paper"></button>
+                <input type ="image" src="img/scissors.png" id="scissors" alt="scissors" ></button>
 
             </div>
 
-            <div class ="player">
 
-                <p>PLAYER</p>
+            <div class ="player-panel">
+
+                <h3>PLAYER</h3>
                 <img id="player-pick" class ="pick" alt="player pick">
-                <p class ="score">SCORE: <span id="player-score"></span></p>
-
-            </div>
+                <h3 class ="score">SCORE: <span id="player-score"></span></h3>
             
+            </div>
         </div>
 
         <div class ="round-panel">
 
-            <p>ROUND: <span id="round"></span></p>
+            <h2>ROUND: <span id="round"></span></h2>
             <img src="./img/vs.png" id="versus">
 
         </div>
 
         <div class ="ai-panel">
 
-            <p>AI</p>
+            <h3>AI</h3>
                 <img id="ai-pick" class ="pick" alt="computer pick">
-                <p class ="score">SCORE: <span id="ai-score"></span></p>
+                <h3 class ="score">SCORE: <span id="ai-score"></span></h3>
         </div>
 
     </div>

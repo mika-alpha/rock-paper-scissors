@@ -1,0 +1,92 @@
+
+body{
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #1A1A1D;
+    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+
+.game, 
+.header, 
+.footer, 
+.low{
+    display: flex;
+}
+
+.header{
+    justify-content: center;
+    align-items: center;
+    background-color: #950740;
+}
+
+
+.game{
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 50px 0px;
+}
+
+.left{
+    display: flex;
+    gap: 10px;
+}
+
+.ai-panel{
+    margin-right: 100px;
+}
+
+.pick-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+
+
+.pick-panel input{
+    width: 100px;
+    height: 100px;
+    background-color: #950740;
+}
+
+.player-panel, .ai-panel, .round-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #950740;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-pick, #ai-pick{
+    visibility: hidden;
+    width: 300px;
+    height: 300px;
+    background-color: #1A1A1D;
+}
+
+.low{
+    justify-content: center;
+    align-self: center;
+    margin-top: 50px;
+}
+
+#new-game{
+    width: 200px;
+    height: 100px;
+}
+
+.footer{
+    display: flex;
+    background-color: #950740;
+    color: white;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
