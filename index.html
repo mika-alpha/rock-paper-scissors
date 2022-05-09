@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Papper Scissors</title>
-    <script src="script.js"></script>
+    <title>RPS VS</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class ="header">
+        <h1>Rock vs Paper vs Scissors</h1>
+    </div>
+
+    <div class ="game">
+
+        <div class ="player-panel">
+
+            <div class ="pick">
+                
+            <input type ="image" src="img/rock.png" id="rock" alt="rock"></button>
+            <input type ="image" src="img/paper.png" id="paper" alt="paper"></button>
+            <input type ="image" src="img/scissors.png" id="scissors" alt="scissors" ></button>
+
+            </div>
+
+            <div class ="player">
+
+                <p>PLAYER</p>
+                <img id="player-pick" class ="pick" alt="player pick">
+                <p class ="score">SCORE: <span id="player-score"></span></p>
+
+            </div>
+            
+        </div>
+
+        <div class ="round-panel">
+
+            <p>ROUND: <span id="round"></span></p>
+            <img src="./img/vs.png" id="versus">
+
+        </div>
+
+        <div class ="ai-panel">
+
+            <p>AI</p>
+                <img id="ai-pick" class ="pick" alt="computer pick">
+                <p class ="score">SCORE: <span id="ai-score"></span></p>
+        </div>
+
+    </div>
+
+    <div class ="low">
+        <button type="button" id ="new-game"> New Game </button>
+    </div>
+
+    <div class ="footer">
+        <p>made by: <a href="https://github.com/mika-alpha">mika-α</a></p>
+    </div>
     
 </body>
 </html>
