@@ -14,8 +14,8 @@ function pick(e){
         newGameButton.click();
     }
     
-    playerImage.setAttribute("src", `./img/${e.target.id}.png`);
-    aiImage.setAttribute("src", `./img/${computerPlay()}.png`);
+    playerImage.setAttribute("src", `img/${e.target.id}.png`);
+    aiImage.setAttribute("src", `img/${computerPlay()}.png`);
     if (playerImage.classList.contains("pick")){
         playerImage.classList.remove("pick");
         aiImage.classList.remove("pick");
