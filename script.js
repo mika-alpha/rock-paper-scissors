@@ -1,12 +1,19 @@
 const playerImage = document.querySelector("#player-pick");
 const aiImage = document.querySelector("#ai-pick");
 const picks = Array.from(document.querySelectorAll("input"));
+const newGameButton = document.getElementById("new-game");
 
 let playerScore = 0;
 let aiScore = 0;
+let roundCount = 0;
 
 
 function pick(e){
+
+    if (playerScore === 5 || aiScore === 5){
+        newGameButton.click();
+    }
+    
     playerImage.setAttribute("src", `/img/${e.target.id}.png`);
     aiImage.setAttribute("src", `/img/${computerPlay()}.png`);
     if (playerImage.classList.contains("pick")){
@@ -17,7 +24,6 @@ function pick(e){
         aiImage.getAttribute("src").lastIndexOf('/')+1, 
         aiImage.getAttribute("src").lastIndexOf('.')
     );
-    console.log(computerPick);
     playRound(e.target.id, computerPick);
     updateScores();
     checkGame();
@@ -28,6 +34,7 @@ picks.forEach(picked => picked.addEventListener('click', pick));
 function updateScores(){
     document.getElementById("player-score").textContent = playerScore;
     document.getElementById("ai-score").textContent = aiScore;
+    document.getElementById("round").textContent = roundCount;
 }
 
 let computerPlay = () => {
@@ -37,7 +44,7 @@ let computerPlay = () => {
 };
 
 function playRound(playerSelection, computerSelection){
-
+    roundCount++;
     if (playerSelection.toLowerCase() === computerSelection.toLowerCase()){
         return;
     } else if (playerSelection.toLowerCase() === "paper"){
@@ -64,3 +71,13 @@ function checkGame(){
     }
 }
 
+function newGame(){
+    playerScore = 0;
+    aiScore = 0;
+    roundCount = 0; 
+    playerImage.classList.add("pick");
+    aiImage.classList.add("pick");
+    updateScores();
+}
+
+newGameButton.addEventListener('click', newGame);

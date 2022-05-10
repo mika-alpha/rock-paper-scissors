@@ -46,10 +46,11 @@ body{
 }
 
 
-.score{
+.score, h2, h3{
     background-color: rgb(230, 131, 19);
-    width: 200px;
+    width: 150px;
     font-weight: 900;
+    text-align: center;
 
 }
 .pick-panel{
@@ -104,6 +105,8 @@ body{
     background-color: rgb(230, 131, 19);
     font-weight: 900;
     font-size: 20px;
+    border-radius: 50px;
+
 }
 
 .footer{
@@ -117,4 +120,9 @@ body{
 a:link, a:visited{
     text-decoration: none;
     color: black;
+}
+
+a {
+    font-weight: 900;
+    font-size: 25px;
 }
