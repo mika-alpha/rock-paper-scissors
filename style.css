@@ -31,7 +31,7 @@ body{
 
 .game{
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
     margin: 50px 0px;
     gap: 20px;
 }
@@ -46,12 +46,25 @@ body{
 }
 
 
+.score{
+    background-color: rgb(230, 131, 19);
+    width: 200px;
+    font-weight: 900;
 
+}
 .pick-panel{
     display: flex;
     flex-direction: column;
     gap: 50px;
     justify-content: center;
+}
+
+.round-panel{
+    height: 400px;
+}
+
+.round-panel img{
+    margin-bottom: 100px;
 }
 
 

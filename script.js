@@ -2,6 +2,9 @@ const playerImage = document.querySelector("#player-pick");
 const aiImage = document.querySelector("#ai-pick");
 const picks = Array.from(document.querySelectorAll("input"));
 
+let playerScore = 0;
+let aiScore = 0;
+
 
 function pick(e){
     playerImage.setAttribute("src", `/img/${e.target.id}.png`);
@@ -10,12 +13,22 @@ function pick(e){
         playerImage.classList.remove("pick");
         aiImage.classList.remove("pick");
     }
-
+    let computerPick = aiImage.getAttribute("src").substring(
+        aiImage.getAttribute("src").lastIndexOf('/')+1, 
+        aiImage.getAttribute("src").lastIndexOf('.')
+    );
+    console.log(computerPick);
+    playRound(e.target.id, computerPick);
+    updateScores();
+    checkGame();
 }
 
 picks.forEach(picked => picked.addEventListener('click', pick));
 
-
+function updateScores(){
+    document.getElementById("player-score").textContent = playerScore;
+    document.getElementById("ai-score").textContent = aiScore;
+}
 
 let computerPlay = () => {
     let options = ["rock", "paper", "scissors"];
@@ -26,27 +39,28 @@ let computerPlay = () => {
 function playRound(playerSelection, computerSelection){
 
     if (playerSelection.toLowerCase() === computerSelection.toLowerCase()){
-        return 0;
+        return;
     } else if (playerSelection.toLowerCase() === "paper"){
         if (computerSelection === "scissors"){
-            return -1;
+            return aiScore++;
         }
     } else if (playerSelection.toLowerCase() === "scissors"){
         if (computerSelection === "rock"){
-            return -1;
+            return aiScore++;;
         }
     } else if (playerSelection.toLowerCase() === "rock"){
         if (computerSelection === "paper"){
-            return -1;
+            return aiScore++;
         }
     } 
-    return 1;
+    return playerScore++;
 }
 
-function game(){
-    let playerScore = 0;
-    let computerScore = 0;
+function checkGame(){
+    if (playerScore === 5){
+        alert("You won!");
+    } else if (aiScore === 5){
+        alert("You lose!");
+    }
 }
-
-
 
