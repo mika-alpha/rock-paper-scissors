@@ -5,20 +5,27 @@ body{
     margin: 0;
     background-color: #1A1A1D;
     font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    min-height: 100vh;
 }
 
 
 .game, 
 .header, 
 .footer, 
-.low{
+.low,
+.body{
     display: flex;
 }
 
+.body{
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
 .header{
     justify-content: center;
     align-items: center;
-    background-color: #950740;
+    background-color: #b94806;
 }
 
 
@@ -48,14 +55,14 @@ body{
 .pick-panel input{
     width: 100px;
     height: 100px;
-    background-color: #950740;
+    background-color: rgb(230, 131, 19);
 }
 
 .player-panel, .ai-panel, .round-panel{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #950740;
+    background-color: #b94806;
     justify-content: center;
     align-items: center;
 }
@@ -70,20 +77,22 @@ body{
 .low{
     justify-content: center;
     align-self: center;
-    margin-top: 50px;
 }
 
 #new-game{
     width: 200px;
     height: 100px;
+    background-color: rgb(230, 131, 19);
+    font-weight: 900;
+    font-size: 20px;
 }
 
 .footer{
     display: flex;
-    background-color: #950740;
+    background-color: #b94806;
     color: white;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: auto;
 }
 
 a:link, a:visited{

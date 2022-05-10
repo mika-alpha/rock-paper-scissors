@@ -14,46 +14,50 @@
         <h2>Rock vs Paper vs Scissors</h1>
     </div>
 
-    <div class ="game">
+    <div class = "body">
 
-        <div class ="left">
+        <div class ="game">
 
-            <div class ="pick-panel">
-                    
-                <input type ="image" src="img/rock.png" id="rock" alt="rock"></button>
-                <input type ="image" src="img/paper.png" id="paper" alt="paper"></button>
-                <input type ="image" src="img/scissors.png" id="scissors" alt="scissors" ></button>
+            <div class ="left">
+
+                <div class ="pick-panel">
+                        
+                    <input type ="image" src="img/rock.png" id="rock" alt="rock"></button>
+                    <input type ="image" src="img/paper.png" id="paper" alt="paper"></button>
+                    <input type ="image" src="img/scissors.png" id="scissors" alt="scissors" ></button>
+
+                </div>
+
+
+                <div class ="player-panel">
+
+                    <h3>PLAYER</h3>
+                    <img id="player-pick" class ="pick" alt="player pick">
+                    <h3 class ="score">SCORE: <span id="player-score"></span></h3>
+                
+                </div>
+            </div>
+
+            <div class ="round-panel">
+
+                <h2>ROUND: <span id="round"></span></h2>
+                <img src="./img/vs.png" id="versus">
 
             </div>
 
+            <div class ="ai-panel">
 
-            <div class ="player-panel">
-
-                <h3>PLAYER</h3>
-                <img id="player-pick" class ="pick" alt="player pick">
-                <h3 class ="score">SCORE: <span id="player-score"></span></h3>
-            
+                <h3>AI</h3>
+                    <img id="ai-pick" class ="pick" alt="computer pick">
+                    <h3 class ="score">SCORE: <span id="ai-score"></span></h3>
             </div>
-        </div>
-
-        <div class ="round-panel">
-
-            <h2>ROUND: <span id="round"></span></h2>
-            <img src="./img/vs.png" id="versus">
 
         </div>
 
-        <div class ="ai-panel">
-
-            <h3>AI</h3>
-                <img id="ai-pick" class ="pick" alt="computer pick">
-                <h3 class ="score">SCORE: <span id="ai-score"></span></h3>
+        <div class ="low">
+            <button type="button" id ="new-game"> New Game </button>
         </div>
-
-    </div>
-
-    <div class ="low">
-        <button type="button" id ="new-game"> New Game </button>
+        
     </div>
 
     <div class ="footer">
