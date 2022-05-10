@@ -1,3 +1,22 @@
+const playerImage = document.querySelector("#player-pick");
+const aiImage = document.querySelector("#ai-pick");
+const picks = Array.from(document.querySelectorAll("input"));
+
+
+function pick(e){
+    playerImage.setAttribute("src", `/img/${e.target.id}.png`);
+    aiImage.setAttribute("src", `/img/${computerPlay()}.png`);
+    if (playerImage.classList.contains("pick")){
+        playerImage.classList.remove("pick");
+        aiImage.classList.remove("pick");
+    }
+
+}
+
+picks.forEach(picked => picked.addEventListener('click', pick));
+
+
+
 let computerPlay = () => {
     let options = ["rock", "paper", "scissors"];
     let pick = Math.floor(Math.random()*3);
